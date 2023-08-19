@@ -1,95 +1,50 @@
-import Image from 'next/image'
+import Head from 'next/head'
 import styles from './page.module.css'
+import { IMenuItem, Menu } from '@/components/menu'
+import { Home } from '@/components/home';
 
-export default function Home() {
+export default function Main() {
+  const menuItems: IMenuItem[] = [
+    { id: 'home', name: 'Inicio'},
+    { id: 'section2', name: 'Sobre'},
+    { id: 'section3', name: 'Projetos'},
+    { id: 'section4', name: 'Contato'},
+  ];
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Head>
+        <title>Lucas Rocha | Fullstack Developer | Portfolio</title>
+      </Head>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <main className={styles.main}>
+        <header id="home" className='flex justify-center items-center  h-20 w-full p-4 fixed z-50'>
+          <Menu menuItems={menuItems}/>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          {/* <div className='flex w-6 h-6 bg-cyan-400 rounded-full'></div>
+          <div className='flex w-6 h-6 bg-cyan-400 rounded-full'></div> */}
+        </header>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <Home/>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+        <section  style={{height: '800px'}}  id="section2"className='w-full bg-slate-400 flex items-center justify-center'>
+          <h1>Sobre</h1>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <section  style={{height: '800px'}} id="section3" className='w-full h-32 bg-slate-500 flex items-center justify-center'>
+          <h1>Projetos</h1>
+        </section>
+
+        <section  style={{height: '800px'}} id="section4" className='w-full h-32 bg-fuchsia-200 flex items-center justify-center'>
+          <h1>Contato</h1>
+        </section>
+
+        <footer className='bg-red-800 w-full h-16 flex items-center justify-center'>
+          <h1>&copy; Copyright - Created by Lucas Rocha - Todos os direitos reservados</h1>
+        </footer>
+      </main>
+    </>
   )
 }
+
+{/* // todo: deixar pagina estatica */}
