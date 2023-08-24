@@ -12,8 +12,10 @@ export default function Main() {
   const menuItems: INavbarItem[] = [
     { id: 'home', name: 'Inicio' },
     { id: 'about', name: 'Sobre' },
-    { id: 'section3', name: 'Projetos' },
-    { id: 'section4', name: 'Contato' },
+    { id: 'skills', name: 'Skills' },
+    { id: 'projects', name: 'Projetos' },
+    { id: 'experience', name: 'Experiencia' },
+    { id: 'contact', name: 'Contato' },
   ]
 
   return (
@@ -30,48 +32,43 @@ export default function Main() {
           <Navbar menuItems={menuItems} />
         </header>
 
+        
         <Home />
 
-        <About />
+        <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
+          <About />
+        </div>        
+        
 
-        <Skills />
+        {/* <div  className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
+          <Skills />
+        </div> */}
 
-        <Projects/>
+        <div className='bg-type02 bg-cover bg-center bg-no-repeat'>
+          <Projects />
+        </div>
 
-        <Experience />
+        <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
+          <div className="bg-experience bg-cover bg-center bg-no-repeat 
+              rounded-tl-[150px] rounded-br-[150px]">
+            <div  className="bg-experienceLight bg-cover bg-center 
+                bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
+              <Experience />
+            </div>
+          </div>
+        </div>
+        
+        <div className='bg-type02 bg-cover bg-center bg-no-repeat relative z-0'>
+          <Contact/>
+        </div>
 
-        <Contact/>
+        <hr/>
 
-
-        {/* <section
-          style={{ height: '800px' }}
-          id="section2"
-          className="w-full bg-slate-400 flex items-center justify-center"
-        >
-          <h1>Sobre</h1>
-        </section> */}
-
-        {/* <section
-          style={{ height: '800px' }}
-          id="section3"
-          className="w-full h-32 bg-slate-500 flex items-center justify-center"
-        >
-          <h1>Projetos</h1>
-        </section>
-
-        <section
-          style={{ height: '800px' }}
-          id="section4"
-          className="w-full h-32 bg-fuchsia-200 flex items-center justify-center"
-        >
-          <h1>Contato</h1>
-        </section> */}
-
-        <footer className="bg-red-800 w-full h-16 flex items-center justify-center">
-          <h1>
-            &copy; Copyright - Created by Lucas Rocha - Todos os direitos
+        <footer className="bg-type01 bg-cover bg-center bg-no-repeat w-full h-16 flex items-center justify-center">
+          <span>
+            &copy; 2023 - Created by Lucas Rocha - Todos os direitos
             reservados
-          </h1>
+          </span>
         </footer>
       </main>
     </>

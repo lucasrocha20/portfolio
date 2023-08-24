@@ -60,19 +60,27 @@ export function Navbar({ menuItems }: INavbarProps) {
   }, [disableScroll])
 
   return (
-    <nav className="bg-slate-600 h-12 rounded-3xl flex items-center justify-center p-2">
+    <nav className="
+      bg-blue-500 
+      opacity-[80%] 
+      h-12 
+      rounded-3xl 
+      flex 
+      items-center 
+      justify-center 
+      p-2">
       <ul className="flex space-x-4 items-center">
         {menuItems?.map((item) => (
           <li
             key={item.id}
             className={` h-8 px-2 py-2 flex items-center justify-center rounded-3xl ${
-              activeSection === item.id ? 'bg-slate-700' : ''
+              activeSection === item.id ? 'bg-blue-100' : ''
             }`}
           >
             <a
               href={item.id === 'home' ? '#' : `#${item.id}`}
               onClick={() => handleClick(item.id)}
-              className={`text-white hover:text-gray-900`}
+              className={`text-white-100`}
             >
               {item.name}
             </a>

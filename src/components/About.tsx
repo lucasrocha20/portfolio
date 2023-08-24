@@ -2,40 +2,16 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-// import { services } from '../constants'
+import { services } from '@/constants';
 import { fadeIn, textVariant } from '@/utils/motion';
 import { SectionWrapper } from '@/hoc/SectionWrapper';
-
-import backend from '../assets/icons/backend.png';
-import frontend from '../assets/icons/frontend.png';
-import prototyping from '../assets/icons/prototyping.png';
-import ux from '../assets/icons/ux.png';
-
-const services = [
-  {
-    title: 'Frontend Developer',
-    icon: frontend.src,
-  },
-  {
-    title: 'Backend Developer',
-    icon: backend.src,
-  },
-  {
-    title: 'UI/UX Design',
-    icon: ux.src,
-  },
-  {
-    title: 'Software Prototyping',
-    icon: prototyping.src,
-  },
-];
 
 
 const ServiceCard = ({ index, title, icon }: any) => {
   return (
     <motion.div
       variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      className="bg-green-200 xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
+      className=" xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
         options={{
@@ -56,7 +32,7 @@ const ServiceCard = ({ index, title, icon }: any) => {
 
 function About() {
   return (
-    <section id="about" className="-mt-[6rem]">
+    <section id="about" className="mt-[6rem] max-w-[1280px]">
       <motion.div variants={textVariant(1)}>
         <p className={"sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins"}>Introduction</p>
         <h2 className={'sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins'}>Overview.</h2>

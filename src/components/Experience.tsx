@@ -10,39 +10,8 @@ import 'react-vertical-timeline-component/style.min.css'
 import { textVariant } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
 import { styles } from '@/styles'
-// import {coverhunt} from '@assets
 import { download, downloadHover, resume, coverhunt, dcc, kelhel, microverse } from '@/assets';
-
-const experiences = [
-  {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt.src,
-    iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
-  },
-  {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse.src,
-    iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
-  },
-  {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel.src,
-    iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
-  },
-  {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc.src,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
-  },
-];
+import { experiences } from '@/constants';
 
 const ExperienceCard = ({ experience }: any) => (
   <VerticalTimelineElement
@@ -89,7 +58,7 @@ const ExperienceCard = ({ experience }: any) => (
 
 const Experience = () => {
   return (
-    <>
+    <section id="experience">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
           What I've done so far
@@ -165,7 +134,7 @@ const Experience = () => {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
-    </>
+    </section>
   )
 }
 

@@ -62,8 +62,9 @@ const Contact = () => {
   }
 
   return (
-    <div
-      className="-mt-[8rem] xl:flex-row flex-col-reverse 
+    <section
+      id="contact"
+      className="max-w-[1280px] mt-[8rem] xl:flex-row flex-col-reverse 
       flex gap-10 overflow-hidden"
     >
       <motion.div
@@ -151,7 +152,7 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-    </div>
+    </section>
   )
 }
 

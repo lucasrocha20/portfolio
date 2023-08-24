@@ -6,4 +6,6 @@
   padding: 0 4.5rem;
   min-height: 100vh;
   background-color: #0F172A; */
+  position: 'relative';
+  z-index: 0;
 }
