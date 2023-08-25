@@ -48,7 +48,7 @@ export default function Main() {
           <Projects />
         </div>
 
-        <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
+        {/* <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
           <div className="bg-experience bg-cover bg-center bg-no-repeat 
               rounded-tl-[150px] rounded-br-[150px]">
             <div  className="bg-experienceLight bg-cover bg-center 
@@ -56,6 +56,9 @@ export default function Main() {
               <Experience />
             </div>
           </div>
+        </div> */}
+        <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
+          <Experience />
         </div>
         
         <div className='bg-type02 bg-cover bg-center bg-no-repeat relative z-0'>

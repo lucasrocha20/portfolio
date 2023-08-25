@@ -1,101 +1,90 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
-import { bwmap, shaq, worldmap } from "@/assets";
+
 import cartoon from '@/assets/personal/cartoon.png'
 
 export function Home() {
   return (
-    <>
-      {/* <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={bwmap.src}
-          alt="world map"
-          className="w-full h-full sm:block hidden object-cover"
-        />
-      </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={worldmap.src}
-          alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
-        />
-      </div> */}
+    <section
+      className="
+        mx-auto 
+        flex 
+        overflow-hidden
+        h-screen 
+        w-full 
+        flex-col
+        bg-hero
+          sm:flex-row
+      "
+
+    >
+
       
-      <section
-        className="
-          flex 
-          sm:flex-row 
-          flex-col 
-          w-full 
-          h-screen
-          mx-auto
-          bg-hero
-          overflow-hidden
-        "
-      >
-        <div className="max-w-[1280px]">
+      <div className="max-w-[1280px]">
         <div
-          className={`
-          absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] sm:px-16 px-6 
-          max-w-7xl mx-auto flex flex-row items-start
-          justify-between gap-3`}
-        >
-          <div className="flex flex-col justify-center items-center mt-5 ml-3">
-            <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
-            <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
+                  className={`
+                absolute inset-0 top-[150px] mx-auto 
+                flex max-w-7xl flex-row items-start 
+                justify-between gap-3 px-6 sm:top-[250px] sm:px-16
+                lg:top-[150px] xl:top-[250px]`}
+                >
+          <div className="ml-3 mt-5 flex flex-col items-center justify-center">
+            <div className="h-5 w-5 rounded-full bg-[#0a0a0a] sm:hidden" />
+            <div className="bw-gradient h-40 w-1 sm:hidden sm:h-80" />
           </div>
 
           <div>
             <h1
               className={`
-              text-blue-100
               
-                font-black 
-                
-                lg:text-[80px] 
-                sm:text-[60px] 
-                xs:text-[50px] 
-                text-[40px] 
-                lg:leading-[90px] 
-                mt-2 
-                
-                font-poppins 
-                uppercase`}
+              
+              text-[40px] 
+              mt-2
+            font-black 
+            uppercase 
+            text-blue-100 
+            xs:text-[50px] 
+            font-poppins 
+              sm:text-[60px] 
+              
+              lg:text-[80px] 
+              lg:leading-[90px]`}
             >
               Hi, I'm{' '}
               <span
                 className="
-                text-white-100 
-                sm:text-[90px] 
-                text-[50px] font-mova
-                font-extrabold uppercase"
+              font-mova 
+              text-[50px] 
+              font-extrabold uppercase
+              text-white-100 sm:text-[90px]"
               >
                 Lucas Rocha
               </span>
             </h1>
-            <p className={`text-blue-100 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 `}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
+            <p
+              className={`mt-2 text-[16px] font-medium text-blue-100 xs:text-[20px] sm:text-[26px] lg:text-[30px] lg:leading-[40px] `}
+            >
+              Lorem ipsum dolor sit amet. <br className="hidden sm:block" />
               consectetur adipisicing elit deleniti, voluptas.
             </p>
           </div>
           <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"
+            className="xxs:mt-4 flex w-screen flex-col 
+          items-start justify-center sm:-ml-[3rem]"
           ></div>
         </div>
 
         <div
-          className="absolute xs:bottom-10 bottom-32 w-full 
-          flex justify-center items-center"
+          className="absolute bottom-32 flex w-full 
+        items-center justify-center xs:bottom-10"
         >
           <a href="#about">
             <div
-              className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
-            justify-center items-start p-2"
+              className="flex h-[64px] w-[35px] items-start 
+          justify-center rounded-3xl border-4
+          border-dim border-french p-2"
             >
               <motion.div
                 animate={{
@@ -106,27 +95,26 @@ export function Home() {
                   repeat: Infinity,
                   repeatType: 'loop',
                 }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
+                className="mb-1 h-3 w-3 rounded-full bg-taupe"
               />
             </div>
           </a>
         </div>
 
         <div>
-          <img src={cartoon.src}
-              className="
-                absolute
-                bottom-0
-                ml-[50vw]
-                sm:h-[90vh] 
-                md:h-[70vh] 
-                xl:h-[80vh]
-              "
-          >
-          </img>
+          <img
+            src={cartoon.src}
+            className="
+              absolute
+              bottom-0
+              ml-[50vw]
+              sm:h-[90vh] 
+              md:h-[70vh] 
+              xl:h-[80vh]
+            "
+          ></img>
         </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

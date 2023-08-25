@@ -8,6 +8,15 @@ import { fadeIn, textVariant, staggerContainer } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
 import { projects } from '@/constants';
 
+
+const Tag = ({children}) => {
+  return (
+    <div className='bg-blue-100 h-18px px-2 rounded-[4px]'>
+      <p className='text-white-100'>{children}</p>
+    </div>
+  )
+}
+
 const ProjectCard = ({
   id,
   name,
@@ -22,13 +31,45 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-      } flex items-center justify-center min-w-[170px] 
-      h-[420px] cursor-pointer card-shadow`}
+      className={`
+      flex 
+      flex-col
+      items-center
+      min-w-[290px] 
+      h-[420px] cursor-pointer card-shadow
+      bg-blue-400
+      `}
       onClick={() => handleClick(id)}
     >
-      <div
+      <img
+        src={image}
+        alt={name}
+        className="  w-full h-[50%] object-cover rounded-t-[20px]"
+      />
+
+<div className='flex flex-col items-center h-[45%]
+
+justify-between
+py-[4px]
+      px-[20px]
+      '
+      
+      >
+  <div>
+  <div className='flex flex-col items-center mb-[8px]'>
+    <h3 className=''>{name}</h3>
+    <span className='text-[12px]'>Feb 6, 2020</span>
+  </div>
+
+  <p className='text-[14px]'>{description}</p>
+  </div>
+  <div className='flex gap-4'>
+    <Tag>Javascript</Tag>
+    <Tag>NodeJS</Tag>
+    <Tag>ReactJS</Tag>
+  </div>
+</div>
+      {/* <div
         className="absolute top-0 left-0 z-10 bg-jetLight 
       h-full w-full opacity-[0.5] rounded-[24px]"
       ></div>
@@ -115,7 +156,7 @@ const ProjectCard = ({
             </button>
           </div>
         </>
-      )}
+      )} */}
     </motion.div>
   )
 }
@@ -133,7 +174,7 @@ function Projects () {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
+          className="mt-4 text-white-100 text-[18px] max-w-3xl leading-[30px]"
         >
           These projects demonstrate my expertise with practical examples of
           some of my work, including brief descriptions and links to code

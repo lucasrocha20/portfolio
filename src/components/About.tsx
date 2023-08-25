@@ -11,7 +11,7 @@ const ServiceCard = ({ index, title, icon }: any) => {
   return (
     <motion.div
       variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      className=" xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
+      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
         options={{
@@ -19,10 +19,10 @@ const ServiceCard = ({ index, title, icon }: any) => {
           scale: 1,
           speed: 450,
         }}
-        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+        className="bg-blue-400 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
         <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-taupe text-[18px] font-bold text-center">
+        <h3 className="text-white-100 text-[18px] font-bold text-center">
           {title}
         </h3>
       </div>
@@ -34,13 +34,13 @@ function About() {
   return (
     <section id="about" className="mt-[6rem] max-w-[1280px]">
       <motion.div variants={textVariant(1)}>
-        <p className={"sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins"}>Introduction</p>
-        <h2 className={'sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins'}>Overview.</h2>
+        <p className={"sm:text-[18px] text-[16px] text-white-100 uppercase tracking-wider font-semibold font-poppins"}>Introduction</p>
+        <h2 className={'sm:text-[32px] text-[32px] text-blue-100 uppercase tracking-wider font-semibold font-poppins'}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
+        className="mt-4 text-white-100 text-[18px] max-w-3xl leading-[30px]"
       >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
         sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
