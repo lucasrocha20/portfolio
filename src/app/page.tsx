@@ -25,26 +25,21 @@ export default function Main() {
       </Head>
 
       <main className={styles.main}>
-        <header
-          id="home"
-          className="flex justify-center items-center  h-20 w-full p-4 fixed z-50"
-        >
+        <header id="home">
           <Navbar menuItems={menuItems} />
         </header>
 
-        
         <Home />
 
-        <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
+        <div className="bg-type01 bg-cover bg-center bg-no-repeat">
           <About />
-        </div>        
-        
+        </div>
 
         {/* <div  className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
           <Skills />
         </div> */}
 
-        <div className='bg-type02 bg-cover bg-center bg-no-repeat'>
+        <div className="bg-type02 bg-cover bg-center bg-no-repeat">
           <Projects />
         </div>
 
@@ -57,20 +52,19 @@ export default function Main() {
             </div>
           </div>
         </div> */}
-        <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
+        <div className="bg-type01 bg-cover bg-center bg-no-repeat">
           <Experience />
         </div>
-        
-        <div className='bg-type02 bg-cover bg-center bg-no-repeat relative z-0'>
-          <Contact/>
+
+        <div className="relative z-0 bg-type02 bg-cover bg-center bg-no-repeat">
+          <Contact />
         </div>
 
-        <hr/>
+        <hr />
 
-        <footer className="bg-type01 bg-cover bg-center bg-no-repeat w-full h-16 flex items-center justify-center">
+        <footer className="flex h-16 w-full items-center justify-center bg-type01 bg-cover bg-center bg-no-repeat">
           <span>
-            &copy; 2023 - Created by Lucas Rocha - Todos os direitos
-            reservados
+            &copy; 2023 - Created by Lucas Rocha - Todos os direitos reservados
           </span>
         </footer>
       </main>

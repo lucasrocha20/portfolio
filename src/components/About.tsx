@@ -6,7 +6,6 @@ import { services } from '@/constants';
 import { fadeIn, textVariant } from '@/utils/motion';
 import { SectionWrapper } from '@/hoc/SectionWrapper';
 
-
 const ServiceCard = ({ index, title, icon }: any) => {
   return (
     <motion.div
@@ -50,11 +49,11 @@ function About() {
         veniam dolorum ipsum doloribus.
       </motion.p>
 
-      <div className=" mt-20 flex gap-10">
+    <div className="mt-20 gap-10 flex flex-wrap justify-center">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+          </div>
     </section>
   )
 }
