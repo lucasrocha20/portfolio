@@ -1,7 +1,9 @@
 import { staggerContainer } from '@/utils/motion';
 import { motion } from 'framer-motion'
 
-export const SectionWrapper = (Component: any, idName: string) => {
+export const SectionWrapper = (Component: any
+  // , idName: string
+  ) => {
     function HOC() {
       return (
         <motion.section
@@ -10,9 +12,9 @@ export const SectionWrapper = (Component: any, idName: string) => {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
           className={`sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0`}>
-          <span className="hash-span" id={idName}>
+          {/* <span className="hash-span" id={idName}>
             &nbsp;
-          </span>
+          </span> */}
   
           <Component />
         </motion.section>

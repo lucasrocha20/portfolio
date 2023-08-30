@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
 import Contact from '@/components/Contact'
-import Skills from '@/components/Skills'
+// import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import { INavbarItem, Navbar } from '@/components/Navbar'
 import { Home } from '@/components/Home'
@@ -12,7 +12,7 @@ export default function Main() {
   const menuItems: INavbarItem[] = [
     { id: 'home', name: 'Inicio' },
     { id: 'about', name: 'Sobre' },
-    { id: 'skills', name: 'Skills' },
+    // { id: 'skills', name: 'Skills' },
     { id: 'projects', name: 'Projetos' },
     { id: 'experience', name: 'Experiencia' },
     { id: 'contact', name: 'Contato' },
@@ -63,7 +63,7 @@ export default function Main() {
         <hr />
 
         <footer className="flex h-16 w-full items-center justify-center bg-type01 bg-cover bg-center bg-no-repeat">
-          <span>
+          <span className='block text-center'>
             &copy; 2023 - Created by Lucas Rocha - Todos os direitos reservados
           </span>
         </footer>
