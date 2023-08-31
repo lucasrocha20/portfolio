@@ -22,10 +22,9 @@ import {
     math,
     movie,
     nyeusi,
-    coverhunt,
-    dcc,
-    kelhel,
-    microverse,
+    tijuca,
+    paguemenos,
+    cast,
   } from '../assets';
   
   export const navLinks = [
@@ -123,32 +122,34 @@ import {
   
   const experiences = [
     {
-      title: 'Front-End Developer',
-      company_name: 'Cover Hunt',
-      icon: coverhunt.src,
-      iconBg: '#333333',
-      date: 'Aug 2021 - Feb 2022',
-    },
-    {
-      title: 'Mentor (Volunteer)',
-      company_name: 'Microverse',
-      icon: microverse.src,
-      iconBg: '#333333',
-      date: 'Mar 2022 - May 2022',
-    },
-    {
-      title: 'Junior Software Engineer',
-      company_name: 'Kelhel',
-      icon: kelhel.src,
-      iconBg: '#333333',
-      date: 'May 2022 - Oct 2022',
+      title: 'IT Technician',
+      company_name: 'Tijuca Alimentos LTDA',
+      icon: tijuca.src,
+      date: 'Jun 2017 - Sep 2019',
     },
     {
       title: 'Full Stack Developer',
-      company_name: 'Diversity Cyber Council',
-      icon: dcc.src,
-      iconBg: '#333333',
-      date: 'Sep 2022 - Present',
+      company_name: 'Tijuca Alimentos LTDA',
+      icon: tijuca.src,
+      date: 'Sep 2019 - Aug 2021',
+    },
+    {
+      title: 'Developer Analyst II',
+      company_name: 'Farmacias Pague Menos',
+      icon: paguemenos.src,
+      date: 'Aug 2021 - Aug 2022',
+    },
+    {
+      title: 'Technical Lead',
+      company_name: 'Farmacias Pague Menos',
+      icon: paguemenos.src,
+      date: 'Sep 2022 - Nov 2022',
+    },
+    {
+      title: 'Senior Software Engineer',
+      company_name: 'Cast Group',
+      icon: cast.src,
+      date: 'Nov 2022 - Present',
     },
   ];
   

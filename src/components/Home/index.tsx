@@ -5,16 +5,7 @@ import Image from 'next/image'
 export function Home() {
   return (
     <section
-      className="
-        relative
-        mx-auto 
-        flex 
-        h-screen
-        w-full  
-        flex-col  
-        overflow-hidden 
-        bg-hero 
-        sm:flex-row"
+      className=" relative mx-auto  flex  h-screen w-full   flex-col   overflow-hidden  bg-hero  sm:flex-row"
     >
       <div className="max-w-[1280px]">
         <div
@@ -34,8 +25,7 @@ export function Home() {
             <p
               className={"mt-2 text-[16px] font-medium text-blue-100 xs:text-[20px] sm:text-[26px] lg:text-[30px] lg:leading-[40px]"}
             >
-              Lorem ipsum dolor sit amet. <br className="hidden sm:block" />
-              consectetur adipisicing elit deleniti, voluptas.
+              A dedicated full-stack developer and technology enthusiast.
             </p>
           </div>
           <div

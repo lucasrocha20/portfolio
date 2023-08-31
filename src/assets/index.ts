@@ -20,10 +20,9 @@ import graphql from './tech/graphql.png'
 import postgresql from './tech/postgresql.png'
 import rubyrails from './tech/rubyrails.png'
 
-import coverhunt from './company/coverhunt.png'
-import dcc from './company/dcc.png'
-import kelhel from './company/kelhel.png'
-import microverse from './company/microverse.png'
+import tijuca from './company/tijuca.png';
+import paguemenos from './company/paguemenos.png';
+import cast from './company/cast.png';
 
 import komikult from './projects/komikult.png'
 import leaderboard from './projects/leaderboard.png'
@@ -57,8 +56,7 @@ export {
   math,
   movie,
   nyeusi,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
+  tijuca,
+  paguemenos,
+  cast
 }

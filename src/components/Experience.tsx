@@ -100,11 +100,12 @@ const Experience = () => {
                   </div>
                 }
               >
+                {/* todo: trocar button por Link */}
                 <button
                   className="live-demo flex justify-between sm:text-[18px] text-[14px] text-timberWolf font-bold font-beckman items-center py-5 pl-3 pr-3 whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] w-[125px] h-[46px] rounded-[10px] sm:mt-[22px] mt-[16px] hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out bg-[#0F172A]"
                   onClick={() =>
                     window.open(
-                      'resume link', // paste the link to your resume here
+                      `/resume.pdf`, // paste the link to your resume here
                       '_blank',
                     )
                   }

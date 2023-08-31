@@ -41,12 +41,9 @@ function About() {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-white-100 text-[18px] max-w-3xl leading-[30px]"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        Software developer with a strong background in Full Stack Development. Experienced in designing and implementing efficient solutions that drive business growth and improve user experiences.
+        Passionate about building user-friendly and visually appealing applications, I consistently prioritize clean code and maintainable software architecture. Committed to delivering exceptional results and exceeding client expectations.
+        I'm Currently improving my English and working at Banco do Brasil in the development area with Stack Javascript front-end and back-end (NodeJS, ReactJS, NextJS), Database (SQL Server, MySQL and PostgreSQL) and Container orchestration (Docker, Docker-Compose and Kubernetes)
       </motion.p>
 
     <div className="mt-20 gap-10 flex flex-wrap justify-center">

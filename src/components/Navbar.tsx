@@ -1,8 +1,8 @@
 'use client'
 
 import { close, menu } from '@/assets'
-import { useCallback, useEffect, useState } from 'react'
-
+import { useCallback, useEffect, useRef, useState } from 'react'
+import {Menu as MenuIcon, Close as CloseIcon} from '@mui/icons-material';
 export interface INavbarItem {
   id: string
   name: string
@@ -17,6 +17,7 @@ export function Navbar({ menuItems }: INavbarProps) {
   const [disableScroll, setDisableScroll] = useState(false)
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null)
   const [toggle, setToggle] = useState(false);
+  const [shadow, setShadow] = useState(true);
 
   const handleClick = (id: string) => {
     setDisableScroll(true)
@@ -32,27 +33,47 @@ export function Navbar({ menuItems }: INavbarProps) {
   }
 
   const handleScroll = () => {
-    if (disableScroll) return
+    const scrollPosition = window.scrollY;
+    // const windowHeight = window.innerHeight;
 
-    const scrollPosition = window.scrollY
+    // const activeSections = menuItems.filter((section) => {
+    //   const sectionElement = document.getElementById(section.id);
+    //   if (sectionElement) {
+    //     let { offsetTop, offsetHeight } = sectionElement;
 
-    menuItems.forEach((section) => {
-      const sectionElement = document.getElementById(section.id)
+    //     // offsetTop - 500
+    //     return (
+    //       scrollPosition >= offsetTop - windowHeight / 2 
+    //       && scrollPosition < offsetTop + offsetHeight
+    //     );
+    //   }
+    //   return false;
+    // });
 
-      if (!sectionElement) return setActiveSection(section.id)
+    if(scrollPosition <= 500 ) {
+      return setActiveSection('home');
+    }
 
-      let offsetTop = sectionElement.offsetTop - 200
+    if(scrollPosition <= 2000 ) {
+      return setActiveSection('about');
+    }
 
-      if (offsetTop < 0) offsetTop = 0
+    if(scrollPosition <= 3700 ) {
+      return setActiveSection('projects');
+    }
 
-      if (
-        offsetTop <= scrollPosition &&
-        offsetTop + sectionElement.offsetHeight > scrollPosition
-      ) {
-        setActiveSection(section.id)
-      }
-    })
-  }
+    if(scrollPosition <= 5000 ) {
+      return setActiveSection('experience');
+    }
+
+    if(scrollPosition > 5000 ) {
+      return setActiveSection('contact');
+    }
+
+    // if (activeSections.length > 0) {
+    //   setActiveSection(activeSections[0].id);
+    // }
+  };
 
   useEffect(() => {
     if (!disableScroll) {
@@ -62,24 +83,24 @@ export function Navbar({ menuItems }: INavbarProps) {
   }, [disableScroll])
 
   return (
-    <nav className="sm:px-16 px-6w-full flex items-center py-2 fixed z-50 flex  h-20 w-full items-center justify-center">
-        <div className="w-full flex justify-betweenitems-centermax-w-7xl mx-auto">
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2bg-blue-500 opacity-[80%]">
-        {menuItems?.map((item) => (
-          <li
-            key={item.id}
-            className={`h-8 px-2 py-2 flex items-center justify-center rounded-3xl ${activeSection === item.id ? 'bg-blue-100' : ''}`}
-          >
-            <a
-              href={item.id === 'home' ? '#' : `#${item.id}`}
-              onClick={() => handleClick(item.id)}
-              className={`text-white-100`}
+    <nav className="sm:px-16 px-6w-full flex items-center justify-centerpy-2 fixed z-50 flex  h-20 w-full">
+      <div className="mx-auto">
+        <ul className="flex items-center justify-center list-none hidden sm:flex flex-row gap-14 mt-2 bg-blue-500 opacity-[80%] rounded-full p-[10px]">
+          {menuItems?.map((item) => (
+            <li
+              key={item.id}
+              className={`h-8 px-2 py-2 flex items-center justify-center rounded-3xl ${activeSection === item.id ? 'bg-blue-100' : ''}`}
             >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+              <a
+                href={item.id === 'home' ? '#' : `#${item.id}`}
+                onClick={() => handleClick(item.id)}
+                className={`text-white-100`}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
 
         {/* mobile */}
         <div className="sm:hidden flex flex-1 w-screen justify-start items-center">
@@ -88,12 +109,9 @@ export function Navbar({ menuItems }: INavbarProps) {
               className={`p-6 bg-blue-500 opacity-[80%] absolute top-0 left-0 w-screen h-[100vh] z-10 transform transition-transform duration-2000 ease-in-out menu ${toggle ? 'menu-open' : 'menu-close'}`}
             >
               <div className="flex justify-end">
-                <img
-                  src={close.src}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
+                <button aria-label="Close menu" onClick={() => setToggle(!toggle)}>
+                  <CloseIcon className='text-white-100' fontSize='large'/>
+                </button>
               </div>
               <ul
                 className="list-none flex flex-col gap-[1rem] items-start justify-end ml-[35px]">
@@ -106,7 +124,20 @@ export function Navbar({ menuItems }: INavbarProps) {
                     // className={`
                     //   text-[88px] font-bold font-arenq 
                     //   uppercase tracking-[1px] cursor-pointer`}
-                      className={`flex items-center h-8 px-2 py-2 flex rounded-full ${activeSection === item.id ? 'bg-blue-100' : ''}`}
+                      className={`
+                       flex 
+                       items-center 
+                       h-8 
+                       px-2 
+                       py-2 
+                       flex 
+                       rounded-full 
+                       ${activeSection === item.id ? 'bg-blue-100' : ''}
+                      
+                      bg-[${
+                        shadow ? "red" : "green"
+                      }]
+                      `}
                     onClick={() => {
                       setToggle(!toggle);
                       // setActive(nav.title);
@@ -117,13 +148,12 @@ export function Navbar({ menuItems }: INavbarProps) {
               </ul>
             </div>
           ) : (
-            // todo: trocar por svg
-            <img
-              src={menu.src}
-              alt="menu"
-              className="w-[34px] h-[34px]object-contain cursor-pointer mr-[20px]"
-              onClick={() => setToggle(!toggle)}
-            />
+            <button 
+            className='ml-[20px]'
+              aria-label='Open menu'
+              onClick={() => setToggle(!toggle)}>
+              <MenuIcon className='text-white-100' fontSize='large'/>
+            </button>
           )}
         </div>
         </div>
