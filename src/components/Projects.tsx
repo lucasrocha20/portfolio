@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
-import { github, komikult, leaderboard, math, movie, nyeusi, pineapple, pineappleHover } from '../assets'
+// import { github, komikult, leaderboard, math, movie, nyeusi, pineapple, pineappleHover } from '../assets'
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
 import { projects } from '@/constants';
@@ -12,7 +12,7 @@ import { projects } from '@/constants';
 const Tag = ({children}: any) => {
   return (
     <div className='bg-blue-100 h-18px px-2 rounded-[4px]'>
-      <p className='text-white-100'>{children}</p>
+      <p className='text-white-100 text-[14px]'>{children}</p>
     </div>
   )
 }
@@ -21,7 +21,9 @@ const ProjectCard = ({
   id,
   name,
   description,
+  tags,
   image,
+  date,
   repo,
   demo,
   index,
@@ -29,7 +31,7 @@ const ProjectCard = ({
   handleClick,
 }: any) => (
   <motion.div
-    className={`flex flex-col items-center min-w-[290px] w-[350px] h-[420px] cursor-pointer card-shadow bg-blue-400`}
+    className={`flex flex-col items-center min-w-[290px] w-[350px] h-[480px] cursor-pointer card-shadow bg-blue-400`}
     variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
     onClick={() => handleClick(id)}
   >
@@ -39,19 +41,19 @@ const ProjectCard = ({
       alt={name}
     />
 
-    <div className='flex flex-col items-center h-[45%] justify-between py-[4px] px-[20px] max-w-[350px]'>
+    <div className='flex flex-col items-center h-[50%] justify-between py-[4px] px-[20px] max-w-[350px]'>
       <div>
         <div className='flex flex-col items-center mb-[8px]'>
           <h3>{name}</h3>
-          <span className='text-[12px]'>Feb 6, 2020</span>
+          <span className='text-[12px]'>{date}</span>
         </div>
 
-        <p className='text-[14px] '>{description}</p>
+        <p className='text-[14px]'>{description}</p>
       </div>
-      <div className='flex gap-4'>
-        <Tag>Javascript</Tag>
-        <Tag>NodeJS</Tag>
-        <Tag>ReactJS</Tag>
+      <div className='flex gap-4 flex-wrap items-center justify-center'>
+      {tags.map((tag: string) => (
+        <Tag>{tag}</Tag>
+        ))}
       </div>
     </div>
   </motion.div>

@@ -24,11 +24,11 @@ import tijuca from './company/tijuca.png';
 import paguemenos from './company/paguemenos.png';
 import cast from './company/cast.png';
 
-import komikult from './projects/komikult.png'
-import leaderboard from './projects/leaderboard.png'
-import math from './projects/math-magicians.png'
-import movie from './projects/movie-metro.png'
-import nyeusi from './projects/nyeusi.png'
+// trocar extensao
+import meetApp from './projects/meetApp.png'
+import rentx from './projects/rentx.png'
+import goBarber from './projects/goBarber.png'
+import goRestaurant from './projects/goRestaurant.png'
 
 export {
   backend,
@@ -51,11 +51,10 @@ export {
   redux,
   tailwind,
   typescript,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
+  meetApp,
+  rentx,
+  goBarber,
+  goRestaurant,
   tijuca,
   paguemenos,
   cast
