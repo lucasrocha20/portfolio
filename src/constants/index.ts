@@ -1,7 +1,6 @@
 import {
     frontend,
     backend,
-    ux,
     prototyping,
     javascript,
     typescript,
@@ -24,6 +23,7 @@ import {
     tijuca,
     paguemenos,
     cast,
+    mobile,
   } from '../assets';
   
   export const navLinks = [
@@ -51,8 +51,8 @@ import {
       icon: backend.src,
     },
     {
-      title: 'UI/UX Design',
-      icon: ux.src,
+      title: 'Mobile Developer',
+      icon: mobile.src,
     },
     {
       title: 'Software Prototyping',

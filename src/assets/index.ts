@@ -1,7 +1,7 @@
 import backend from './icons/backend.png'
-import ux from './icons/ux.png'
 import frontend from './icons/frontend.png'
 import prototyping from './icons/prototyping.png'
+import mobile from './icons/mobile.png'
 // import github from './icons/github.png'
 import resume from './icons/resume.png'
 
@@ -32,9 +32,9 @@ import goRestaurant from './projects/goRestaurant.png'
 
 export {
   backend,
-  ux,
   frontend,
   prototyping,
+  mobile,
 //   github,
   resume,
   css,
