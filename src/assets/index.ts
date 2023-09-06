@@ -2,7 +2,6 @@ import backend from './icons/backend.png'
 import frontend from './icons/frontend.png'
 import prototyping from './icons/prototyping.png'
 import mobile from './icons/mobile.png'
-// import github from './icons/github.png'
 import resume from './icons/resume.png'
 
 import css from './tech/css.png'
@@ -35,7 +34,6 @@ export {
   frontend,
   prototyping,
   mobile,
-//   github,
   resume,
   css,
   docker,

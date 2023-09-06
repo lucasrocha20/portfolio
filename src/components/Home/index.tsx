@@ -1,6 +1,9 @@
 import cartoon from '@/assets/personal/cartoon.png'
 import { AboutButton } from './AboutButton'
 import Image from 'next/image'
+import { ContactItem } from './ContactItem';
+import { github } from '@/assets'
+import { GitHub, LinkedIn } from '@mui/icons-material';
 
 export function Home() {
   return (
@@ -27,6 +30,11 @@ export function Home() {
             >
               A dedicated full-stack developer and technology enthusiast.
             </p>
+
+            <div className='flex gap-2 mt-2'>
+              <ContactItem icon={<GitHub />} ariaLabel="Link for Github" href='https://www.linkedin.com/in/dev-lucas-rocha/'/>
+              <ContactItem icon={<LinkedIn />} ariaLabel="Link for Linkdin" href='https://www.linkedin.com/in/dev-lucas-rocha/'/>
+            </div>
           </div>
           <div
             className="xxs:mt-4 flex w-screen flex-col items-start justify-center sm:-ml-[3rem]"
@@ -35,8 +43,8 @@ export function Home() {
 
         <AboutButton />
 
-<div className=''>
-        <Image
+    <div className=''>
+      <Image
           src={cartoon.src}
           alt="Lucas Rocha"
           objectFit='cover'
