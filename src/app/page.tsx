@@ -71,7 +71,3 @@ export default function Main() {
     </>
   )
 }
-
-{
-  /* // todo: deixar pagina estatica */
-}

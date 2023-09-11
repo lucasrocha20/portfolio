@@ -17,13 +17,13 @@ const Contact = () => {
   })
   const [loading, setLoading] = useState(false)
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target
 
     setForm({ ...form, [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
     setLoading(true)
 
@@ -106,7 +106,7 @@ const Contact = () => {
               Your Message
             </span>
             <textarea
-              rows="7"
+              rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}

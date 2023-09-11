@@ -58,11 +58,11 @@ function About() {
         business growth and improve user experiences. Passionate about building
         user-friendly and visually appealing applications, I consistently
         prioritize clean code and maintainable software architecture. Committed
-        to delivering exceptional results and exceeding client expectations. I'm
-        Currently improving my English and working at Banco do Brasil in the
-        development area with Stack Javascript front-end and back-end (NodeJS,
-        ReactJS, NextJS), Database (SQL Server, MySQL and PostgreSQL) and
-        Container orchestration (Docker, Docker-Compose and Kubernetes)
+        to delivering exceptional results and exceeding client expectations.
+        I&apos;m Currently improving my English and working at Banco do Brasil
+        in the development area with Stack Javascript front-end and back-end
+        (NodeJS, ReactJS, NextJS), Database (SQL Server, MySQL and PostgreSQL)
+        and Container orchestration (Docker, Docker-Compose and Kubernetes)
       </motion.p>
 
       <div className="mt-20 flex flex-wrap justify-center gap-10">
