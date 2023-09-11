@@ -13,11 +13,11 @@ const ServiceCard = ({ index, title, icon }: any) => {
       className="card-gradient w-full rounded-[20px] p-[1px] shadow-card xs:w-[250px]"
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        // options={{
+        //   max: 45,
+        //   scale: 1,
+        //   speed: 450,
+        // }}
         className="flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-blue-400 px-12 py-5"
       >
         <img src={icon} alt={title} className="h-16 w-16 object-contain" />
