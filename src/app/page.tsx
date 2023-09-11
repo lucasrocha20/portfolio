@@ -63,7 +63,7 @@ export default function Main() {
         <hr />
 
         <footer className="flex h-16 w-full items-center justify-center bg-type01 bg-cover bg-center bg-no-repeat">
-          <span className='block text-center'>
+          <span className="block text-center">
             &copy; 2023 - Created by Lucas Rocha - All rights reserved
           </span>
         </footer>

@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser'
 import { styles } from '../styles'
 import { slideIn } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
-import {Send as SendIcon} from '@mui/icons-material';
+import { Send as SendIcon } from '@mui/icons-material'
 
 const Contact = () => {
   const formRef = useRef()
@@ -55,20 +55,21 @@ const Contact = () => {
           setLoading(false)
           alert('Something went wrong. Please try again.')
         },
-      ).catch(() => {
+      )
+      .catch(() => {
         setLoading(false)
-          alert('Something went wrong. Please try again.')
+        alert('Something went wrong. Please try again.')
       })
   }
 
   return (
     <section
       id="contact"
-      className="max-w-[1280px] mt-[8rem] xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"
+      className="mt-[8rem] flex max-w-[1280px] flex-col-reverse gap-10 overflow-hidden xl:flex-row"
     >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-blue-400 p-8 rounded-2xl"
+        className="flex-[0.75] rounded-2xl bg-blue-400 p-8"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
@@ -79,29 +80,29 @@ const Contact = () => {
           className="mt-10 flex flex-col gap-6 font-poppins"
         >
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Name</span>
+            <span className="mb-4 font-medium text-timberWolf">Your Name</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium"
+              className="rounded-lg border-none bg-eerieBlack px-6 py-4 font-medium text-timberWolf outline-none placeholder:text-taupe"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Email</span>
+            <span className="mb-4 font-medium text-timberWolf">Your Email</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium"
+              className="rounded-lg border-none bg-eerieBlack px-6 py-4 font-medium text-timberWolf outline-none placeholder:text-taupe"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">
+            <span className="mb-4 font-medium text-timberWolf">
               Your Message
             </span>
             <textarea
@@ -110,17 +111,17 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What's your message?"
-              className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium resize-none"
+              className="resize-none rounded-lg border-none bg-eerieBlack px-6 py-4 font-medium text-timberWolf outline-none placeholder:text-taupe"
             />
           </label>
 
           <button
             type="submit"
-            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out"
+            className="live-demo flex h-[45px] w-[100px] items-center justify-center gap-3 whitespace-nowrap rounded-[10px] bg-night py-5 font-beckman text-[16px] font-bold text-timberWolf transition duration-[0.2s] ease-in-out hover:bg-battleGray hover:text-eerieBlack sm:h-[50px] sm:w-[130px] sm:gap-4 sm:text-[20px]"
           >
             {loading ? 'Sending' : 'Send'}
 
-            <SendIcon className='text-white-100' fontSize='small' />
+            <SendIcon className="text-white-100" fontSize="small" />
           </button>
         </form>
       </motion.div>

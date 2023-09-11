@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import {
   VerticalTimeline,
@@ -10,9 +10,9 @@ import 'react-vertical-timeline-component/style.min.css'
 import { textVariant } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
 import { styles } from '@/styles'
-import { resume } from '@/assets';
-import { experiences } from '@/constants';
-import {Download as DownloadIcon} from '@mui/icons-material';
+import { resume } from '@/assets'
+import { experiences } from '@/constants'
+import { Download as DownloadIcon } from '@mui/icons-material'
 
 const ExperienceCard = ({ experience }: any) => (
   <VerticalTimelineElement
@@ -27,28 +27,28 @@ const ExperienceCard = ({ experience }: any) => (
     }}
     date={
       <div>
-        <h3 className="text-white-100 text-[18px] font-bold font-beckman">
+        <h3 className="font-beckman text-[18px] font-bold text-white-100">
           {experience.date}
         </h3>
       </div>
     }
     iconStyle={{ background: '#0F172A' }}
     icon={
-      <div className="flex justify-center items-center w-full h-full">
+      <div className="flex h-full w-full items-center justify-center">
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className="h-[60%] w-[60%] object-contain"
         />
       </div>
     }
   >
     <div>
-      <h3 className="text-white-100 text-[24px] font-bold font-beckman tracking-[2px]">
+      <h3 className="font-beckman text-[24px] font-bold tracking-[2px] text-white-100">
         {experience.title}
       </h3>
       <p
-        className="text-[#A9A9A9] text-[22px] font-semibold font-overcameBold tracking-[1px]"
+        className="font-overcameBold text-[22px] font-semibold tracking-[1px] text-[#A9A9A9]"
         style={{ margin: 0 }}
       >
         {experience.company_name}
@@ -60,13 +60,13 @@ const ExperienceCard = ({ experience }: any) => (
 const Experience = () => {
   return (
     <section id="experience">
-      <div className="bg-[#2C3342] bg-cover bg-center bg-no-repeat rounded-tl-[150px] rounded-br-[150px]">
-        <div className='py-[100px]'>
+      <div className="rounded-br-[150px] rounded-tl-[150px] bg-[#2C3342] bg-cover bg-center bg-no-repeat">
+        <div className="py-[100px]">
           <motion.div variants={textVariant()}>
-            <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
+            <p className={`${styles.sectionSubText} pl-[2rem] sm:pl-16`}>
               What I've done so far
             </p>
-            <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
+            <h2 className={`${styles.sectionHeadText} pl-[2rem] sm:pl-16`}>
               Work Experience.
             </h2>
           </motion.div>
@@ -91,18 +91,18 @@ const Experience = () => {
                 }}
                 iconStyle={{ background: '#0F172A' }}
                 icon={
-                  <div className="flex justify-center items-center w-full h-full">
+                  <div className="flex h-full w-full items-center justify-center">
                     <img
                       src={resume.src}
                       alt="resume"
-                      className="w-[45%] h-[45%] object-contain"
+                      className="h-[45%] w-[45%] object-contain"
                     />
                   </div>
                 }
               >
                 {/* todo: trocar button por Link */}
                 <button
-                  className="live-demo flex justify-between sm:text-[18px] text-[14px] text-timberWolf font-bold font-beckman items-center py-5 pl-3 pr-3 whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] w-[125px] h-[46px] rounded-[10px] sm:mt-[22px] mt-[16px] hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out bg-[#0F172A]"
+                  className="live-demo mt-[16px] flex h-[46px] w-[125px] items-center justify-between gap-1 whitespace-nowrap rounded-[10px] bg-[#0F172A] py-5 pl-3 pr-3 font-beckman text-[14px] font-bold text-timberWolf transition duration-[0.2s] ease-in-out hover:bg-battleGray hover:text-eerieBlack sm:mt-[22px] sm:h-[58px] sm:w-[148px] sm:text-[18px]"
                   onClick={() =>
                     window.open(
                       `/resume.pdf`, // paste the link to your resume here
@@ -111,8 +111,7 @@ const Experience = () => {
                   }
                 >
                   MY RESUME
-                <DownloadIcon className='text-white-100' fontSize='small'/>
-
+                  <DownloadIcon className="text-white-100" fontSize="small" />
                 </button>
               </VerticalTimelineElement>
             </VerticalTimeline>

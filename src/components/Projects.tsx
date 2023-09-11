@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -6,13 +6,12 @@ import { styles } from '../styles'
 // import { github, komikult, leaderboard, math, movie, nyeusi, pineapple, pineappleHover } from '../assets'
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
-import { projects } from '@/constants';
+import { projects } from '@/constants'
 
-
-const Tag = ({children}: any) => {
+const Tag = ({ children }: any) => {
   return (
-    <div className='bg-blue-100 h-18px px-2 rounded-[4px]'>
-      <p className='text-white-100 text-[14px]'>{children}</p>
+    <div className="h-18px rounded-[4px] bg-blue-100 px-2">
+      <p className="text-[14px] text-white-100">{children}</p>
     </div>
   )
 }
@@ -31,35 +30,35 @@ const ProjectCard = ({
   handleClick,
 }: any) => (
   <motion.div
-    className={`flex flex-col items-center min-w-[290px] w-[350px] h-[480px] cursor-pointer card-shadow bg-blue-400`}
+    className={`card-shadow flex h-[480px] w-[350px] min-w-[290px] cursor-pointer flex-col items-center bg-blue-400`}
     variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
     onClick={() => handleClick(id)}
   >
     <img
-      className="w-full h-[50%] object-cover rounded-t-[20px]"
+      className="h-[50%] w-full rounded-t-[20px] object-cover"
       src={image}
       alt={name}
     />
 
-    <div className='flex flex-col items-center h-[50%] justify-between py-[4px] px-[20px] max-w-[350px]'>
+    <div className="flex h-[50%] max-w-[350px] flex-col items-center justify-between px-[20px] py-[4px]">
       <div>
-        <div className='flex flex-col items-center mb-[8px]'>
+        <div className="mb-[8px] flex flex-col items-center">
           <h3>{name}</h3>
-          <span className='text-[12px]'>{date}</span>
+          <span className="text-[12px]">{date}</span>
         </div>
 
-        <p className='text-[14px]'>{description}</p>
+        <p className="text-[14px]">{description}</p>
       </div>
-      <div className='flex gap-4 flex-wrap items-center justify-center'>
-      {tags.map((tag: string) => (
-        <Tag>{tag}</Tag>
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        {tags.map((tag: string) => (
+          <Tag key={tag}>{tag}</Tag>
         ))}
       </div>
     </div>
   </motion.div>
 )
 
-function Projects () {
+function Projects() {
   const [active, setActive] = useState('project-2')
 
   return (
@@ -69,10 +68,10 @@ function Projects () {
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
       </motion.div>
 
-      <div className="w-full flex">
+      <div className="flex w-full">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-white-100 text-[18px] max-w-3xl leading-[30px]"
+          className="mt-4 max-w-3xl text-[18px] leading-[30px] text-white-100"
         >
           These projects demonstrate my expertise with practical examples of
           some of my work, including brief descriptions and links to code
@@ -89,7 +88,7 @@ function Projects () {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
       >
-        <div className="mt-[50px] gap-5 flex flex-wrap justify-center">
+        <div className="mt-[50px] flex flex-wrap justify-center gap-5">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
