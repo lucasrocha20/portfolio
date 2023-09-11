@@ -9,7 +9,7 @@ import { SectionWrapper } from '@/hoc/SectionWrapper'
 import { Send as SendIcon } from '@mui/icons-material'
 
 const Contact = () => {
-  const formRef = useRef()
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: '',
     email: '',
