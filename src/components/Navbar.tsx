@@ -1,7 +1,6 @@
 'use client'
 
-import { close, menu } from '@/assets'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material'
 export interface INavbarItem {
   id: string

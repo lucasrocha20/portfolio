@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
-// import { github, komikult, leaderboard, math, movie, nyeusi, pineapple, pineappleHover } from '../assets'
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
 import { projects } from '@/constants'

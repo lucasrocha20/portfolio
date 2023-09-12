@@ -2,7 +2,6 @@ import cartoon from '@/assets/personal/cartoon.png'
 import { AboutButton } from './AboutButton'
 import Image from 'next/image'
 import { ContactItem } from './ContactItem'
-import { github } from '@/assets'
 import { GitHub, LinkedIn } from '@mui/icons-material'
 
 export function Home() {
