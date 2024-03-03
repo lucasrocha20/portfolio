@@ -1,8 +1,9 @@
-import cartoon from '@/assets/personal/cartoon.png'
-import { AboutButton } from './AboutButton'
-import Image from 'next/image'
-import { ContactItem } from './ContactItem'
+// import cartoon from '@/assets/personal/cartoon.png'
+import cartoon from '@/assets/personal/teste.png'
 import { GitHub, LinkedIn } from '@mui/icons-material'
+import Image from 'next/image'
+import { AboutButton } from './AboutButton'
+import { ContactItem } from './ContactItem'
 
 export function Home() {
   return (
@@ -34,11 +35,11 @@ export function Home() {
               <ContactItem
                 icon={<GitHub />}
                 ariaLabel="Link for Github"
-                href="https://www.linkedin.com/in/dev-lucas-rocha/"
+                href="https://github.com/lucasrocha20"
               />
               <ContactItem
                 icon={<LinkedIn />}
-                ariaLabel="Link for Linkdin"
+                ariaLabel="Link for Linkedin"
                 href="https://www.linkedin.com/in/dev-lucas-rocha/"
               />
             </div>
@@ -48,17 +49,13 @@ export function Home() {
 
         <AboutButton />
 
-        <div className="">
+        <div>
           <Image
             src={cartoon.src}
             alt="Lucas Rocha"
             objectFit="cover"
             fill
-            className={`
-            absolute
-            bottom-0 
-             ml-[45vw] 
-            `}
+            className="absolute bottom-0 ml-[45vw]"
           />
         </div>
       </div>

@@ -1,29 +1,42 @@
 import {
-  frontend,
   backend,
-  prototyping,
-  javascript,
-  typescript,
-  html,
+  cast,
+  cicd,
+  csharp,
   css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  git,
-  figma,
   docker,
-  postgresql,
-  rubyrails,
-  graphql,
-  meetApp,
-  rentx,
+  dotnet,
+  express,
+  figma,
+  frontend,
+  git,
   goBarber,
   goRestaurant,
-  tijuca,
-  paguemenos,
-  cast,
+  graphql,
+  html,
+  javascript,
+  jenkins,
+  jest,
+  kubernetes,
+  meetApp,
   mobile,
+  mongodb,
+  mysql,
+  nestjs,
+  nextjs,
+  nodejs,
+  paguemenos,
+  php,
+  postgresql,
+  prototyping,
+  reactjs,
+  redux,
+  rentx,
+  sqlserver,
+  storybook,
+  tailwind,
+  tijuca,
+  typescript,
 } from '../assets'
 
 export const navLinks = [
@@ -61,14 +74,7 @@ const services = [
 ]
 
 const technologies = [
-  {
-    name: 'HTML 5',
-    icon: html.src,
-  },
-  {
-    name: 'CSS 3',
-    icon: css.src,
-  },
+  // Languages
   {
     name: 'JavaScript',
     icon: javascript.src,
@@ -78,53 +84,129 @@ const technologies = [
     icon: typescript.src,
   },
   {
-    name: 'React JS',
+    name: 'C#',
+    icon: csharp.src,
+  },
+  {
+    name: 'PHP',
+    icon: php.src,
+  },
+  {
+    name: 'Node JS',
+    icon: nodejs.src,
+  },
+  // Frameworks
+  {
+    name: 'React',
     icon: reactjs.src,
   },
   {
-    name: 'Redux Toolkit',
+    name: 'Next JS',
+    icon: nextjs.src,
+  },
+  {
+    name: 'Nest JS',
+    icon: nestjs.src,
+  },
+  {
+    name: 'Express',
+    icon: express.src,
+  },
+  {
+    name: 'Graphql',
+    icon: graphql.src,
+  },
+  {
+    name: '.NET',
+    icon: dotnet.src,
+  },
+  // Database
+  {
+    name: 'PostgreSQL',
+    icon: postgresql.src,
+  },
+  {
+    name: 'SQL Server',
+    icon: sqlserver.src,
+  },
+  {
+    name: 'MySQL',
+    icon: mysql.src,
+  },
+  {
+    name: 'MongoDB',
+    icon: mongodb.src,
+  },
+  // Devops
+  {
+    name: 'Docker',
+    icon: docker.src,
+  },
+  {
+    name: 'Kubernetes',
+    icon: kubernetes.src,
+  },
+  {
+    name: 'CI/CD',
+    icon: cicd.src,
+  },
+  {
+    name: 'Jenkins',
+    icon: jenkins.src,
+  },
+  // Libs
+  {
+    name: 'Redux',
     icon: redux.src,
+  },
+  {
+    name: 'Jest',
+    icon: jest.src,
+  },
+  {
+    name: 'Figma',
+    icon: figma.src,
+  },
+  {
+    name: 'Storybook',
+    icon: storybook.src,
   },
   {
     name: 'Tailwind CSS',
     icon: tailwind.src,
   },
   {
-    name: 'Node JS',
-    icon: nodejs.src,
-  },
-  {
-    name: 'Rails',
-    icon: rubyrails.src,
-  },
-  {
-    name: 'graphql',
-    icon: graphql.src,
-  },
-  {
-    name: 'postgresql',
-    icon: postgresql.src,
-  },
-  {
-    name: 'git',
+    name: 'Git',
     icon: git.src,
   },
   {
-    name: 'figma',
-    icon: figma.src,
+    name: 'HTML 5',
+    icon: html.src,
   },
   {
-    name: 'docker',
-    icon: docker.src,
+    name: 'CSS 3',
+    icon: css.src,
   },
 ]
 
 const experiences = [
   {
-    title: 'IT Technician',
-    company_name: 'Tijuca Alimentos LTDA',
-    icon: tijuca.src,
-    date: 'Jun 2017 - Sep 2019',
+    title: 'Senior Software Engineer',
+    company_name: 'Cast Group',
+    icon: cast.src,
+    date: 'Nov 2022 - Present',
+  },
+  {
+    title: 'Technical Lead',
+    company_name: 'Pague Menos Drug Store',
+    icon: paguemenos.src,
+    date: 'Sep 2022 - Nov 2022',
+  },
+  {
+    title: 'Developer Analyst II',
+    company_name: 'Pague Menos Drug Store',
+    icon: paguemenos.src,
+    date: 'Aug 2021 - Aug 2022',
   },
   {
     title: 'Full Stack Developer',
@@ -133,22 +215,10 @@ const experiences = [
     date: 'Sep 2019 - Aug 2021',
   },
   {
-    title: 'Developer Analyst II',
-    company_name: 'Farmacias Pague Menos',
-    icon: paguemenos.src,
-    date: 'Aug 2021 - Aug 2022',
-  },
-  {
-    title: 'Technical Lead',
-    company_name: 'Farmacias Pague Menos',
-    icon: paguemenos.src,
-    date: 'Sep 2022 - Nov 2022',
-  },
-  {
-    title: 'Senior Software Engineer',
-    company_name: 'Cast Group',
-    icon: cast.src,
-    date: 'Nov 2022 - Present',
+    title: 'IT Technician',
+    company_name: 'Tijuca Alimentos LTDA',
+    icon: tijuca.src,
+    date: 'Jun 2017 - Sep 2019',
   },
 ]
 
@@ -199,4 +269,4 @@ const projects = [
   },
 ]
 
-export { services, technologies, experiences, projects }
+export { experiences, projects, services, technologies }

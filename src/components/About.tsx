@@ -1,10 +1,9 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
 import { services } from '@/constants'
-import { fadeIn, textVariant } from '@/utils/motion'
 import { SectionWrapper } from '@/hoc/SectionWrapper'
+import { fadeIn, textVariant } from '@/utils/motion'
+import { motion } from 'framer-motion'
 
 const ServiceCard = ({ index, title, icon }: any) => {
   return (
