@@ -1,7 +1,7 @@
 'use client'
 
+import { Close as CloseIcon, Menu as MenuIcon } from '@mui/icons-material'
 import { useEffect, useState } from 'react'
-import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material'
 export interface INavbarItem {
   id: string
   name: string
@@ -33,45 +33,18 @@ export function Navbar({ menuItems }: INavbarProps) {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY
-    // const windowHeight = window.innerHeight;
 
-    // const activeSections = menuItems.filter((section) => {
-    //   const sectionElement = document.getElementById(section.id);
-    //   if (sectionElement) {
-    //     let { offsetTop, offsetHeight } = sectionElement;
+    if (scrollPosition <= 500) return setActiveSection('home')
 
-    //     // offsetTop - 500
-    //     return (
-    //       scrollPosition >= offsetTop - windowHeight / 2
-    //       && scrollPosition < offsetTop + offsetHeight
-    //     );
-    //   }
-    //   return false;
-    // });
+    if (scrollPosition <= 1800) return setActiveSection('about')
 
-    if (scrollPosition <= 500) {
-      return setActiveSection('home')
-    }
+    if (scrollPosition <= 3000) return setActiveSection('skills')
 
-    if (scrollPosition <= 2000) {
-      return setActiveSection('about')
-    }
+    if (scrollPosition <= 4500) return setActiveSection('projects')
 
-    if (scrollPosition <= 3700) {
-      return setActiveSection('projects')
-    }
+    if (scrollPosition <= 5000) return setActiveSection('experience')
 
-    if (scrollPosition <= 5000) {
-      return setActiveSection('experience')
-    }
-
-    if (scrollPosition > 5000) {
-      return setActiveSection('contact')
-    }
-
-    // if (activeSections.length > 0) {
-    //   setActiveSection(activeSections[0].id);
-    // }
+    if (scrollPosition > 6000) return setActiveSection('contact')
   }
 
   useEffect(() => {
@@ -128,18 +101,9 @@ export function Navbar({ menuItems }: INavbarProps) {
                     // className={`
                     //   text-[88px] font-bold font-arenq
                     //   uppercase tracking-[1px] cursor-pointer`}
-                    className={`
-                       flex 
-                       flex 
-                       h-8 
-                       items-center 
-                       rounded-full 
-                       px-2 
-                       py-2 
-                       ${activeSection === item.id ? 'bg-blue-100' : ''}
-                      
-                      bg-[${shadow ? 'red' : 'green'}]
-                      `}
+                    className={`flex h-8 items-center rounded-full px-2 py-2 ${
+                      activeSection === item.id ? 'bg-blue-100' : ''
+                    } bg-[${shadow ? 'red' : 'green'}]`}
                     onClick={() => {
                       setToggle(!toggle)
                       // setActive(nav.title);
