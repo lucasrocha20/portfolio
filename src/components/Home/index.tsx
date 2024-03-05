@@ -1,5 +1,4 @@
-// import cartoon from '@/assets/personal/cartoon.png'
-import cartoon from '@/assets/personal/teste.png'
+import profile from '@/assets/personal/profile.png'
 import { GitHub, LinkedIn } from '@mui/icons-material'
 import Image from 'next/image'
 import { AboutButton } from './AboutButton'
@@ -51,11 +50,14 @@ export function Home() {
 
         <div>
           <Image
-            src={cartoon.src}
+            src={profile.src}
             alt="Lucas Rocha"
-            objectFit="cover"
-            fill
-            className="absolute bottom-0 ml-[45vw]"
+            width={400}
+            height={400}
+            // objectFit="cover"
+            // fill
+            // className="absolute bottom-0 ml-[45vw]"
+            className="absolute bottom-48 ml-[60vw]"
           />
         </div>
       </div>

@@ -44,15 +44,6 @@ export default function Main() {
           <Projects />
         </div>
 
-        {/* <div className='bg-type01 bg-cover bg-center bg-no-repeat'>
-          <div className="bg-experience bg-cover bg-center bg-no-repeat 
-              rounded-tl-[150px] rounded-br-[150px]">
-            <div  className="bg-experienceLight bg-cover bg-center 
-                bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
-              <Experience />
-            </div>
-          </div>
-        </div> */}
         <div className="bg-type02 bg-cover bg-center bg-no-repeat">
           <Experience />
         </div>
